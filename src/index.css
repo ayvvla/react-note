@@ -1,13 +1,138 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  min-height: 100vh;
+  height: max-content;
+  margin-inline: auto;
+  padding: 1.5em;
+  font-size: 1.3em;
+}
+
+.container.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mode--toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.mode--toggle:hover {
+  background-color: #e8e8e8;
+  cursor: pointer;
+}
+.mode--toggle.dark {
+  color: black;
+  background-color: #121212;
+}
+
+.mode--toggle.dark:hover {
+  background-color: #7b7b7b;
+}
+
+.note {
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #92deab;
+  margin-bottom: 10px;
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap
+}
+
+.note.dark {
+  background-color: #055720;
+}
+
+/*0055720*/
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notelist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.new--note {
+  background-color: #ffe3b3;
+}
+
+.new--note.dark {
+  background-color: #4e360d;
+}
+
+textarea {
+  border: none;
+  background-color: #ffe3b3;
+  resize: none;
+  white-space: pre-wrap;
+  background-color: #ffe3b3;
+  font-size: 1.4rem;
+}
+
+.new--note.dark textarea {
+  background-color: #4e360d;
+
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #e1e1e1;
+}
+
+.btn:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.search {
+  margin-block: 1em;
+  border-radius: 10px;
+  background-color: #b4b4b4;
+  padding: 9px;
+  display: flex;
+  align-items: center;
+}
+
+.search--input {
+  width: 100%;
+  border: none;
+  background-color: #b4b4b4;
+  text-indent: 10px;
+}
+
+.search--input:focus {
+  outline: none;
 }
